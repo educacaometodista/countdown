@@ -1,6 +1,5 @@
-
 <style>
-  @import 'https://fonts.googleapis.com/css?family=Muli%7CRubik:400,400i,500,700';
+  @import "https://fonts.googleapis.com/css?family=Muli%7CRubik:400,400i,500,700";
 
   .text-center {
     text-align: center;
@@ -40,7 +39,7 @@
 
   .allCard a:hover {
     text-decoration: none !important;
-}
+  }
 
   .container {
     margin: 0 auto;
@@ -111,14 +110,14 @@
   .card .card-content {
     padding: 24px 24px 1px 24px !important;
   }
-  
+
   .allCard li {
     font-family: "Rubik", sans-serif !important;
   }
 
   .allCard ul {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     margin-top: 40px;
   }
 
@@ -144,7 +143,7 @@
   span.textCount {
     font-size: 1em !important;
     margin-top: 20px;
-}
+  }
 
   @media only screen and (min-width: 767px) {
     .allCard {
@@ -165,40 +164,46 @@
   }
 </style>
 
-
-
-
 <a href="http://vestibularmetodista.com.br" target="_blank" class="globalRef">
   <div class="row allCard">
     <div class="col s12 m12">
       <div class="card blue-grey darken-1">
         <div class="card-content white-text text-center bg-overlay">
-          <span class="card-title">Inscreva-se na Prova Tradicional</span>
+          <span class="card-title">A inscrição para a prova tradicional encerra em</span>
           <!-- <span class="card-subtitle">Faltam</span> -->
           <div class="countdown">
             <ul>
-              <li class="text-center"><span id="days"></span><span class="textCount">Dias</span></li>
-              <li class="text-center"><span id="hours"></span><span class="textCount">Horas</span></li>
-              <li class="text-center"><span id="minutes"></span><span class="textCount">Minutos</span></li>
-              <li class="text-center"><span id="seconds"></span><span class="textCount">Segundos</span></li>
+              <li class="text-center">
+                <span id="days"></span><span class="textCount">Dias</span>
+              </li>
+              <li class="text-center">
+                <span id="hours"></span><span class="textCount">Horas</span>
+              </li>
+              <li class="text-center">
+                <span id="minutes"></span><span class="textCount">Minutos</span>
+              </li>
+              <li class="text-center">
+                <span id="seconds"></span
+                ><span class="textCount">Segundos</span>
+              </li>
             </ul>
           </div>
           <!-- <span class="card-footertitle">Prova tradicional</span> -->
         </div>
         <div class="card-action text-center bg-overlay">
           <a href="#">
-            <span class="yellow-span">Isenção da Matrícula</span> <span class="white-span">mais</span>
-            <span class="yellow-span">20% de desconto</span> <span class="white-span">no primeiro ano aos
-            20 primeiros colocados.</span>
+            <span class="white-span"
+              >Os 20 primeiros colocados na prova tradicional têm:<br /><span
+                class="yellow-span"
+                >isenção de matrícula + 20% de desconto no primeiro ano</span
+              >
+            </span>
           </a>
         </div>
       </div>
     </div>
   </div>
 </a>
-
-
-
 
 <script>
   const second = 1000,
