@@ -1,6 +1,5 @@
-
 <style>
-  @import 'https://fonts.googleapis.com/css?family=Muli%7CRubik:400,400i,500,700';
+  @import "https://fonts.googleapis.com/css?family=Muli%7CRubik:400,400i,500,700";
 
   .text-center {
     text-align: center;
@@ -40,6 +39,11 @@
 
   .allCard a:hover {
     text-decoration: none !important;
+  }
+
+  .allCard a:visited,
+  .allCard a:link {
+    border-bottom: 0 !important;
 }
 
   .container {
@@ -47,22 +51,14 @@
   }
 
   .card.blue-grey.darken-1 {
-    background: url("http://leunardo.dev/countdown/assets/bg.jpg");
+    background: url("") no-repeat / no-repeat cover;
   }
 
   .bg-overlay {
-    background: -webkit-gradient(
-      linear,
-      left bottom,
-      right top,
-      color-stop(0%, #057dd285),
-      color-stop(100%, #052d449e)
-    );
-    background: -webkit-linear-gradient(45deg, #057dd285 0%, #052d448c 100%);
-    background: -o-linear-gradient(45deg, #057dd2 0%, #052d44 100%);
-    background: linear-gradient(45deg, #057dd2 0%, #052d44d1 100%);
+    background: -webkit-gradient( linear, left bottom, right top, color-stop(0%, #00000085), color-stop(100%, #0000009e) );
+    background: linear-gradient(45deg, #000000 0%, #000000a8 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#057dd2', endColorstr='#052d44b0',GradientType=1);
-  }
+}
 
   .card .card-content .card-title {
     display: block;
@@ -74,7 +70,7 @@
 
   span.card-title {
     border-bottom: 1px solid #ffffff54;
-    color: #ffd50f !important;
+    color: #de8f31 !important;
     padding-bottom: 15px;
   }
 
@@ -111,7 +107,7 @@
   .card .card-content {
     padding: 24px 24px 1px 24px !important;
   }
-  
+
   .allCard li {
     font-family: "Rubik", sans-serif !important;
   }
@@ -132,8 +128,8 @@
     margin-bottom: 15px;
   }
 
-  .yellow-span {
-    color: #ffd50f;
+  .orange-span {
+    color: #de8f31;
     font-weight: 500;
   }
 
@@ -144,7 +140,7 @@
   span.textCount {
     font-size: 1em !important;
     margin-top: 20px;
-}
+  }
 
   @media only screen and (min-width: 767px) {
     .allCard {
@@ -165,9 +161,6 @@
   }
 </style>
 
-
-
-
 <a href="http://vestibularmetodista.com.br" target="_blank" class="globalRef">
   <div class="row allCard">
     <div class="col s12 m12">
@@ -177,28 +170,37 @@
           <!-- <span class="card-subtitle">Faltam</span> -->
           <div class="countdown">
             <ul>
-              <li class="text-center"><span id="days"></span><span class="textCount">Dias</span></li>
-              <li class="text-center"><span id="hours"></span><span class="textCount">Horas</span></li>
-              <li class="text-center"><span id="minutes"></span><span class="textCount">Minutos</span></li>
-              <li class="text-center"><span id="seconds"></span><span class="textCount">Segundos</span></li>
+              <li class="text-center">
+                <span id="days"></span><span class="textCount">Dias</span>
+              </li>
+              <li class="text-center">
+                <span id="hours"></span><span class="textCount">Horas</span>
+              </li>
+              <li class="text-center">
+                <span id="minutes"></span><span class="textCount">Minutos</span>
+              </li>
+              <li class="text-center">
+                <span id="seconds"></span
+                ><span class="textCount">Segundos</span>
+              </li>
             </ul>
           </div>
           <!-- <span class="card-footertitle">Prova tradicional</span> -->
         </div>
         <div class="card-action text-center bg-overlay">
           <a href="#">
-            <span class="yellow-span">Isenção da Matrícula</span> <span class="white-span">mais</span>
-            <span class="yellow-span">20% de desconto</span> <span class="white-span">no primeiro ano aos
-            20 primeiros colocados.</span>
+            <span class="orange-span">Isenção da Matrícula</span>
+            <span class="white-span">mais</span>
+            <span class="orange-span">20% de desconto</span>
+            <span class="white-span"
+              >no primeiro ano aos 20 primeiros colocados.</span
+            >
           </a>
         </div>
       </div>
     </div>
   </div>
 </a>
-
-
-
 
 <script>
   const second = 1000,
