@@ -1,3 +1,5 @@
+@import 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css';
+
 #vestibularCountdown {
   background-image: -moz-linear-gradient(top, #b8b0af 0%, #f2ecea 100%);
   background-image: -webkit-linear-gradient(top, #b8b0af 0%, #f2ecea 100%);
