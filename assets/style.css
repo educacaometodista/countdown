@@ -1,4 +1,4 @@
-@import 'https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css';
+@import "https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css";
 
 * {
   box-sizing: border-box;
@@ -7,7 +7,7 @@
 }
 
 body {
-  background-color: #ffd50f;
+  background-color: #fff;
 }
 
 .text-center {
@@ -58,11 +58,17 @@ body {
 }
 
 .card.blue-grey.darken-1 {
-  background: url('bg.jpg');
+  background: url("bg.jpg");
 }
 
 .overlay {
-  background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, #057dd285), color-stop(100%, #052d449e));
+  background: -webkit-gradient(
+    linear,
+    left bottom,
+    right top,
+    color-stop(0%, #057dd285),
+    color-stop(100%, #052d449e)
+  );
   background: -webkit-linear-gradient(45deg, #057dd285 0%, #052d448c 100%);
   background: -o-linear-gradient(45deg, #057dd2 0%, #052d44 100%);
   background: linear-gradient(45deg, #057dd2 0%, #052d44d1 100%);
@@ -122,20 +128,35 @@ div.countdown {
   font-weight: 500;
 }
 
-@media only screen and (min-width:767px) {
+@media only screen and (min-width: 767px) {
   .allCard {
-    display: inline-block;
+    /* display: inline-block;
     vertical-align: middle;
     -webkit-transform: perspective(1px) translateZ(0);
     transform: perspective(1px) translateZ(0);
     box-shadow: 0 0 1px rgba(0, 0, 0, 0);
     position: relative;
-    transition: 0.5s;
+    transition: 0.5s; */
   }
-  
+
   .allCard:hover {
-    -webkit-transform: scale(1.1);
+    /* -webkit-transform: scale(1.1);
     transform: scale(1.1);
-    transition: 0.5s;
+    transition: 0.5s; */
   }
+}
+
+/* BREAKING MATERIALIZE */
+
+.card {
+  -webkit-box-shadow: 0px 0px 0px 0px !important;
+   box-shadow: 0px 0px 0px 0px !important;
+}
+
+.row .col {
+  padding: 0 !important;
+}
+
+.card {
+  margin: 0 !important;
 }
