@@ -74,10 +74,12 @@ body {
   font-size: 40px;
   margin-bottom: 10px;
   font-weight: 700;
+  line-height: 1em;
 }
 
 span.card-title {
   border-bottom: 1px solid #ffffff54;
+  color: #ffd50f !important;
   padding-bottom: 15px;
 }
 
@@ -96,18 +98,13 @@ span.card-footertitle {
 }
 
 .card-action.text-center a {
-  color: #ffd50f !important;
-  font-weight: 700;
-  font-size: 22px;
+  color: #fff !important;
+  font-size: 18px;
+  text-transform: unset !important;
 }
 
-.card-action.text-center a:hover {
-  color: #ffeb8a !important;
-  transition: 0.3s;
-}
-
-.card-action.text-center {
-  background: #065790ba;
+.card .card-content {
+  padding: 24px 24px 1px 24px !important;
 }
 
 div.countdown span,
@@ -118,4 +115,27 @@ div.countdown li {
 
 div.countdown {
   margin-bottom: 15px;
+}
+
+.yellow-span {
+  color: #ffd50f;
+  font-weight: 500;
+}
+
+@media only screen and (min-width:767px) {
+  .allCard {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .allCard:hover {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    transition: 0.5s;
+  }
 }
