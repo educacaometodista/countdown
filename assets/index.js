@@ -17,14 +17,15 @@ var x = setInterval(function() {
 
   // Display the result in the element with id="demo"
   document.getElementById("vestibularCountdown").innerHTML =
+    'Faltam: ' +
     days +
-    " dias " +
+    (days > 0 ? ' dias ' : ' dia ') + 
     hours +
-    " horas " +
+    (hours > 0 ? ' horas ' : ' hora ') +
     minutes +
-    " minutos " +
+    (minutes > 0 ? ' minutos ' : ' minuto ') +
     seconds +
-    " segundos ";
+    (seconds > 0 ? ' segundos ' : ' segundo ');
 
   // If the count down is finished, write some text
   if (distance < 0) {
