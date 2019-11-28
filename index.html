@@ -1,122 +1,151 @@
 <style>
   @import "https://fonts.googleapis.com/css?family=Muli%7CRubik:400,400i,500,700";
+
   .text-center {
     text-align: center;
   }
+
   .container {
     color: #222;
     text-align: center;
   }
+
   h1 {
     font-weight: normal;
   }
+
   li.text-center {
     display: inline-block;
     font-size: 1.5em;
     list-style-type: none;
-    padding: 0.5em 1em;
+    padding: 0.5em 0.5em;
     text-transform: uppercase;
   }
+
   li.text-center span {
     display: block;
     font-size: 4.5rem;
   }
+
   .allCard {
     width: 100%;
     font-family: "Rubik", sans-serif !important;
     margin-bottom: 20px;
   }
+
   .allCard a {
     text-decoration: none;
   }
-  #content a:hover {
-    text-decoration: none !important;
-  }
+
   .allCard a:hover {
     text-decoration: none !important;
   }
-  .allCard a:visited,
-  .allCard a:link {
-    border-bottom: 0 !important;
-  }
+
   .container {
     margin: 0 auto;
   }
+
   .card.blue-grey.darken-1 {
-    background: url("") no-repeat / no-repeat cover;
+    background: url("");
   }
+
   .bg-overlay {
     background: -webkit-gradient( linear, left bottom, right top, color-stop(0%, #205e30), color-stop(100%, #0c3c19) );
     background: linear-gradient(45deg, #205e30 0%, #0c3c19 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#057dd2', endColorstr='#052d44b0',GradientType=1);
 }
+
+  #content a:link, dl.portlet a:link {
+    border-bottom: 0px !important;
+  }
+
+  #content a:hover {
+    text-decoration: none !important;
+  }
+
   .card .card-content .card-title {
     display: block;
-    font-size: 28px;
-    text-transform: uppercase;
+    font-size: 23px;
     margin-bottom: 10px;
     font-weight: 700;
-    line-height: 1.5em;
+    line-height: 1em;
+    text-transform: uppercase;
   }
+
   span.card-title {
     border-bottom: 1px solid #ffffff54;
     color: #c7b73e !important;
     padding-bottom: 15px;
   }
+
   span.card-subtitle {
     font-size: 20px;
   }
+
   span.card-footertitle {
     font-size: 20px;
     margin-top: 10px;
   }
+
   .card-action.text-center.bg-overlay {
     padding: 20px 10px;
   }
+
   .card-action.text-center a {
     display: block;
     margin: 0 auto;
     font-size: 13.5px;
   }
+
   .allCard a:link {
     color: #fff !important;
     text-decoration: none;
   }
+
   .card-action.text-center a {
     color: #fff !important;
     font-size: 18px;
     text-transform: unset !important;
   }
+
   .card .card-content {
     padding: 24px 24px 1px 24px !important;
   }
+
   .allCard li {
     font-family: "Rubik", sans-serif !important;
   }
+
   .allCard ul {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     margin-top: 40px;
   }
+
   div.countdown span,
   div.countdown ul,
   div.countdown li {
     color: #fff;
   }
+
   div.countdown {
     margin-bottom: 15px;
   }
+
   .orange-span {
     color: #c7b73e;
-    font-weight: 500;
+    font-weight: 900;
   }
+
   .white-span {
     color: #fff;
   }
+
   span.textCount {
     font-size: 1em !important;
     margin-top: 20px;
   }
+
   @media only screen and (min-width: 768px) {
     .allCard {
       display: inline-block;
@@ -129,26 +158,33 @@
       -webkit-transition-property: box-shadow;
       transition-property: box-shadow;
     }
+
     .allCard:hover {
       box-shadow: 8px 12px 10px -10px rgba(0, 0, 0, 0.5);
     }
   }
+
   @media only screen and (max-width: 767px) {
-    .allCard ul {
-      display: inline-block;
-      text-align: center;
-    }
+    li.text-center span#days,
+    li.text-center span#hours,
+    li.text-center span#minutes,
+    li.text-center span#seconds {
+    font-size: 3rem;
+  }
+
+  span.textCount {
+    font-size: 13px !important;
+  }
+  
   }
 </style>
 
-<a href="http://vestibularcentenario.com.br" target="_blank" class="globalRef">
+<a href="http://vestibularizabelahendrix.com.br" target="_blank" class="globalRef">
   <div class="row allCard">
     <div class="col s12 m12">
       <div class="card blue-grey darken-1">
         <div class="card-content white-text text-center bg-overlay">
-          <span class="card-title"
-            >A inscrição para a prova tradicional encerra em</span
-          >
+          <span class="card-title">A inscrição para a prova tradicional encerra em</span>
           <!-- <span class="card-subtitle">Faltam</span> -->
           <div class="countdown">
             <ul>
@@ -170,16 +206,8 @@
           <!-- <span class="card-footertitle">Prova tradicional</span> -->
         </div>
         <div class="card-action text-center bg-overlay">
-            <a href="#">
-                <span class="white-span">Aprovados que realizarem a matrícula até 14 de dezembro terão<br><span class="orange-span">50% de desconto na primeira mensalidade.</span>
-                </span>
-
-
-                <!--
-                   50% de desconto na 1ª mensalidade para aprovados que realizarem a matrícula até 14/12/19
-                -->
-
-              </a>
+          <a href="#">
+            <span class="white-span">Aprovados que realizarem a matrícula até 14 de dezembro terão<br><span class="orange-span">50% de desconto na primeira mensalidade.</span>
           </a>
         </div>
       </div>
@@ -192,10 +220,12 @@
     minute = second * 60,
     hour = minute * 60,
     day = hour * 24;
+
   let countDown = new Date("Dec 05, 2019 23:59:59").getTime(),
     x = setInterval(function() {
       let now = new Date().getTime(),
         distance = countDown - now;
+
       (document.getElementById("days").innerText = Math.floor(distance / day)),
         (document.getElementById("hours").innerText = Math.floor(
           (distance % day) / hour
@@ -206,6 +236,7 @@
         (document.getElementById("seconds").innerText = Math.floor(
           (distance % minute) / second
         ));
+
       //do something later when date is reached
       //if (distance < 0) {
       //  clearInterval(x);
