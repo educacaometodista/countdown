@@ -1,6 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Titillium+Web:400,600,700');
 @import url('https://fonts.googleapis.com/css?family=Oswald:300,400,600');
 
+body {
+  margin: 5%;
+  text-align: center;
+}
+
+/* IMPORTAR APENAS OS ESTILOS NECESSÁRIOS DAQUI EM DIANTE */
+
 h2.varejo {
   font-family: 'Titillium Web', sans-serif;
   font-weight: 700;
