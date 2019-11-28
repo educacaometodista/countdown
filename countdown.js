@@ -19,13 +19,13 @@ var x = setInterval(function() {
   document.querySelector("h4.varejo").innerHTML =
     '' +
     days +
-    (days > 0 ? ' dias, ' : ' dia, ') + 
+    (days == 1 ? ' dia, ' : ' dias, ') + 
     hours +
-    (hours > 0 ? ' horas, ' : ' hora, ') +
+    (hours == 1 ? ' hora, ' : ' horas, ') +
     minutes +
-    (minutes > 0 ? ' minutos e ' : ' minuto e ') +
+    (minutes == 1 ? ' minuto e ' : ' minutos e ') +
     seconds +
-    (seconds > 0 ? ' segundos ' : ' segundo ');
+    (seconds == 1 ? ' segundo ' : ' segundos ');
 
   // If the count down is finished, write some text
   if (distance < 0) {
