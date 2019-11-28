@@ -1,1 +1,18 @@
 @import url('https://fonts.googleapis.com/css?family=Titillium+Web:400,600,700');
+@import url('https://fonts.googleapis.com/css?family=Oswald:300,400,600');
+
+h2.varejo {
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 700;
+  font-size: 2.3em;
+  color: #004898;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+h4.varejo {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1.2;
+}
