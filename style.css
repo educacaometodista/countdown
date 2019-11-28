@@ -25,8 +25,12 @@ h4.varejo {
 }
 
 @media only screen and (max-width: 767px) {
-  h2.varejo,
+  h2.varejo {
+    text-align: center;
+    font-size: 1.5rem;
+  }
   h4.varejo {
     text-align: center;
+    font-size: 1.2rem;
   }
 }
