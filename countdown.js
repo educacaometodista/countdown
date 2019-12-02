@@ -30,7 +30,7 @@ var x = setInterval(function() {
   // If the count down is finished, write some text
   if (distance < 0) {
     clearInterval(x);
-    document.querySelector("h4.varejo").innerHTML =
-      "JÁ ESTÁ ACONTECENDO!";
+    var countDownDate = new Date("Dec 05, 2019 23:59:59").getTime();
+    document.querySelector("h2.varejo").innerHTML = "A prova tradicional acontecerá em"
   }
 }, 1000);
