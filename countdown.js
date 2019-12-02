@@ -1,6 +1,8 @@
 // Set the date we're counting down to
 var countDownDate = new Date("Dec 05, 2019 23:59:59").getTime();
 
+const thisPage = window.location.href;
+
 // Update the count down every 1 second
 var x = setInterval(function() {
   // Get todays date and time
@@ -17,20 +19,38 @@ var x = setInterval(function() {
 
   // Display the result in the element with id="demo"
   document.querySelector("h4.varejo").innerHTML =
-    '' +
+    "" +
     days +
-    (days == 1 ? ' dia, ' : ' dias, ') + 
+    (days == 1 ? " dia, " : " dias, ") +
     hours +
-    (hours == 1 ? ' hora, ' : ' horas, ') +
+    (hours == 1 ? " hora, " : " horas, ") +
     minutes +
-    (minutes == 1 ? ' minuto e ' : ' minutos e ') +
+    (minutes == 1 ? " minuto e " : " minutos e ") +
     seconds +
-    (seconds == 1 ? ' segundo ' : ' segundos ');
+    (seconds == 1 ? " segundo " : " segundos ");
 
-  // If the count down is finished, write some text
-  if (distance < 0) {
+  // If the count down is finished (UMESP, IMIH, IPA, FMC, IMG)
+  if (distance < 0 && new Date().getTime() < 1575802800000 && thisPage.indexOf('unimep') == -1) {
     clearInterval(x);
-    var countDownDate = new Date("Dec 05, 2019 23:59:59").getTime();
-    document.querySelector("h2.varejo").innerHTML = "A prova tradicional acontecerá em"
+    var countDownDate = new Date("Dec 08, 2019 09:00:00").getTime();
+    document.querySelector("h2.varejo").innerHTML =
+      "A prova tradicional acontecerá em";
+  }
+
+  // If the count down is finished (UNIMEP)
+  if (distance < 0 && new Date().getTime() < 1575802800000 && thisPage.indexOf('unimep') != -1) {
+    clearInterval(x);
+    var countDownDate = new Date("Dec 08, 2019 13:00:00").getTime();
+    document.querySelector("h2.varejo").innerHTML =
+      "A prova tradicional acontecerá em";
+  }
+
+  // If the count down is finished
+  if (distance < 0 && new Date().getTime() > 1575802800000) {
+    clearInterval(x);
+    var countDownDate = new Date("Dec 08, 2019 13:00:00").getTime();
+    document.querySelector("h2.varejo").innerHTML =
+      "Vestibular 2020";
+    document.querySelector("h4.varejo").innerHTML = "Inscrições gratuitas"
   }
 }, 1000);
